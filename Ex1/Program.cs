@@ -25,14 +25,44 @@ void PrintMatrix(int[,]matr)
     }
 }
 
-int[,] resultMatrix=GetMatrix(5,6,0,10);
+int[,] resultMatrix=GetMatrix(3,4,0,10);
+Console.WriteLine("исходный массив: ");
 PrintMatrix(resultMatrix);
+Console.WriteLine();
 
-for(int i=0;i<resultMatrix.GetLength(0);i++)
+int i =1;
+int temp=resultMatrix[i,0];
+for (int j=1; j<resultMatrix.Length-1;j++)
 {
-    for(int j=0;j<resultMatrix.GetLength(1);j++)
+    if(resultMatrix[i,j]>resultMatrix[i,j-1])
     {
-        int temp=0;
-        if()
+        temp=resultMatrix[i,j-1];
+        resultMatrix[i,j-1]=resultMatrix[i,j];
+        resultMatrix[i,j]=resultMatrix[i,j-1];
     }
 }
+int i =2;
+int temp=resultMatrix[i,0];
+for (int j=1; j<resultMatrix.Length-1;j++)
+{
+    if(resultMatrix[i,j]>resultMatrix[i,j-1])
+    {
+        temp=resultMatrix[i,j-1];
+        resultMatrix[i,j-1]=resultMatrix[i,j];
+        resultMatrix[i,j]=resultMatrix[i,j-1];
+    }
+}
+/*for(int i=0;i<resultMatrix.Length;i++)
+{
+    int temp=resultMatrix[i,0];
+    for(int j=0;j<resultMatrix.Length-1;j++)
+    {
+        if(resultMatrix[i,j]>resultMatrix[i,j+1])
+        {
+            temp=resultMatrix[i,j];
+            resultMatrix[i,j]=resultMatrix[i,j+1];
+            resultMatrix[i,j+1]=temp;
+        }
+    }
+}
+PrintMatrix(resultMatrix);*/
