@@ -35,7 +35,9 @@ void PrintMatrix(int[,] inputMatrix)
 
 int[,] resultMatrix=GetMatrix(x,y,0,max);
 PrintMatrix(resultMatrix);
-
+/// <summary>
+/// ищем строку с наименьшей суммой элементов
+/// </summary>
 int minSumRow=0;
 int sumRow=SumRowElements(resultMatrix,0);
 for(int i=0;i<resultMatrix.GetLength(0);i++)
