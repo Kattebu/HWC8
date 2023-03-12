@@ -38,7 +38,9 @@ PrintMatrix(firstMatrix);
 Console.WriteLine("отсортированный массив: ");
 SortedArray(firstMatrix);
 PrintMatrix(firstMatrix);
-
+/// <summary>
+/// сортируем строки по убыванию
+/// </summary>
 void SortedArray(int[,]array)
 {
     for(int i=0;i<array.GetLength(0);i++)
